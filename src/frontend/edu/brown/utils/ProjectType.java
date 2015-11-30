@@ -52,6 +52,7 @@ public enum ProjectType {
     EXAMPLE("Example", "edu.brown.benchmark.example"),
     ARTICLES ("Articles", "edu.brown.benchmark.articles"),
     USERS ("Users", "edu.brown.benchmark.users"),
+    SCAN ("SCAN Benchmark", "edu.wisc.benchmark.scan"),
     TEST("Test", null),
     ;
 
