@@ -1,0 +1,16 @@
+mysqlslap -u root -p --delimiter=";" --create="DROP TABLE IF EXISTS TABLE_A;CREATE TABLE TABLE_A (A_ID BIGINT PRIMARY KEY, A_VAL_SEQ BIGINT, A_VAL_RAND BIGINT);LOAD DATA LOCAL INFILE '/home/manishbansal/DataInput.csv' REPLACE INTO TABLE TABLE_A FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';" --query="query_seq_non_index.sql" --concurrency=10 --iterations=20
+
+--local-infile=1
+
+
+LOAD DATA LOCAL INFILE '/home/manishbansal/DataInput.csv' REPLACE INTO TABLE TABLE_A FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+
+
+mysql --local-infile=1 -u username -p `
+
+
+/home/manishbansal/query_seq_non_index.sql
+
+
+mysqlslap -u root -p --query="call seq_non_index();" --concurrency=2 --iterations=1
+
