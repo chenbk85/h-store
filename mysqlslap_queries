@@ -14,3 +14,6 @@ mysql --local-infile=1 -u username -p `
 
 mysqlslap -u root -p --query="call seq_non_index();" --concurrency=2 --iterations=1
 
+
+ant hstore-prepare -Dproject=scan -Devictable="TABLEA" -Dhosts=/home/manishbansal/h-store/custom-cluster.txt
+ant hstore-benchmark -Dproject=scan -Dsite.anticache_enable=true -Dsite.anticache_dir=obj/anticache

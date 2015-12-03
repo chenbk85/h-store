@@ -38,7 +38,7 @@ public class ScanLoader extends Loader {
             //       be sent to the DBMS
             VoltTable table = CatalogUtil.getVoltTable(catalog_tbl);
             
-            long totalSize = 1000000L;
+            long totalSize = 40000000L;
             long batchSize = 1000;
             long randomSeed = 0xFFFF;
             

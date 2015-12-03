@@ -69,7 +69,7 @@ public class ScanClient extends BenchmarkComponent {
         
         int procIdx = 0;
         String procName = ScanProjectBuilder.PROCEDURES[procIdx].getSimpleName();
-        a_id = (a_id++) % 1000000L; // TODO remove this hard-coded number
+        a_id = (a_id++) %40000000L; // TODO remove this hard-coded number
         Object procParams[] = new Object[] { a_id } ; // TODO
         
         Callback callback = new Callback(procIdx);
